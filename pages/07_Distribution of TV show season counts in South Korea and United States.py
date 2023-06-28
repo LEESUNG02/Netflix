@@ -16,6 +16,9 @@ tab1, tab2, tab3 = st.tabs(["South Korea", "United States", "Comparison"])
 sk_data_counts = sk_data['type'].value_counts()
 usa_data_counts = usa_data['type'].value_counts()
 
+width = st.sidebar.slider("plot width", 0.1, 25., 10.)
+height = st.sidebar.slider("plot height", 0.1, 25., 12.)
+
 with tab1:
     #sk_data_counts = sk_data['type'].value_counts()
     sk_tv_shows_data = data[(data['country'] == 'South Korea') & (data['type'] == 'TV Show')]
